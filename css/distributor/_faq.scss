@@ -1,0 +1,102 @@
+.faq_section{
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right top;
+    .accordion_back{
+        width: 100%;
+        .accordion-item{
+            margin-bottom: 18px;
+            .accordion-header{
+                .accordion-button{
+                    padding: 20px 30px;
+                    color: var(--secondary-color);
+                    font-size: 20px;
+                    outline-style: none;
+                    box-shadow: inset 0 -1px 0 #cccccc;
+                    &:focus{
+                        border-color: transparent;
+                        box-shadow: inset 0 -1px 0 #cccccc;
+                    }
+                    &::after{
+                        width: 24px;
+                        height: 24px;
+                        background-image: url(../images/plus.png);
+                        transform: rotate(0) !important;
+                    }
+                    
+                }
+            }
+            .accordion-body{
+                padding: 20px 30px;
+                line-height: 33px;
+                font-size: 15px;
+            }
+        }
+    }
+}
+.accordion-button:not(.collapsed){
+    background-color: transparent;
+}
+.accordion-button:not(.collapsed)::after{
+    background-image: url(../images/minus.png) !important;
+}
+
+@media only screen and (max-width:1500px){
+    .faq_section{
+        .accordion_back{
+            .accordion-item {
+                .accordion-header{
+                    .accordion-button{
+                        font-size: 17px;
+                    }
+                }
+                .accordion-body{
+                    font-size: 13px;
+                    line-height: 28px;
+                }
+            }
+        }
+    }
+}
+@media only screen and (max-width:1365px){
+    .faq_section{
+        position: relative;
+        z-index: 1;
+        &::before{
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255,255,255,.5);
+            position: absolute;
+            top: 0;
+            left: 0;
+            content: "";
+            z-index: -1;
+        }
+        .accordion_back{
+            margin-top: 50px;
+        }
+    }
+}
+
+@media only screen and (max-width:500px){
+    .faq_section{
+        .custom_heading{
+            text-align: center;
+        }
+        .accordion_back{
+            margin-top: 28px;
+            .accordion-item {
+                .accordion-header{
+                    .accordion-button{
+                        font-size: 12px;
+                    }
+                }
+                .accordion-body{
+                    font-size: 11px;
+                    line-height: 24px;
+                }
+            }
+        }
+    }
+}

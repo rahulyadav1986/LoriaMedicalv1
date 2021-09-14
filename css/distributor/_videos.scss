@@ -1,0 +1,160 @@
+.bor_del{
+    width: 100%;
+    padding: 15px 0;
+    border-bottom: #eaeaea 1px solid;
+    border-top: #eaeaea 1px solid;
+    margin-bottom: 34px;
+    img{
+        width: 105px;
+    }
+    p{
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 33px;
+        padding-left: 27px;
+    }
+    
+}
+
+.videos_section{
+    background-color: #fbfbfb;
+    p{
+        font-size: 16px;
+        line-height: 33px;
+    }
+    .doc_pro{
+        width: 100%;
+        margin: 34px 0;
+        img{
+            width: 79px;
+            height: 79px;
+            object-fit: cover;
+            border-radius: 100%;
+            border: var(--primary-color) 2px solid;
+            box-shadow: rgba(204,204,204,.75) 0 0 10px;
+            margin-right: 27px;
+        }
+        h3{
+            font-size: 27px;
+            font-weight: 700;
+        }
+    }
+    .buttons_back{
+        .custom_button{
+            margin-right: 15px;
+            &:last-child{
+                margin-right: 0;
+            }
+            &:nth-child(2){
+                a{
+                    background-color: transparent;
+                    color: var(--primary-color);
+                    &:hover{
+                        background-color: var(--primary-color);
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+    .video_gal_back{
+        &.inner{
+            grid-template-columns: repeat(4, 1fr);
+        }
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 18px;
+        .port{
+            width: 100%;
+            position: relative;
+            .avator{
+                width: 100%;
+            }
+            .vid_pop{
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                width: 69px;
+                height: 64px;
+                background-color: var(--primary-color);
+                background-image: url(../images/vid_arrow.png);
+                background-position: center;
+                background-repeat: no-repeat;
+                cursor: pointer;
+                img{
+                    width: auto;
+                }
+            }
+        }
+    }
+    .content_area{
+        padding-right: 50px;
+    }
+}
+
+
+@media only screen and (max-width:1365px){
+    .videos_section{
+        .content_area{
+            margin-bottom: 30px;
+            padding-right: 0;
+        }
+        .bor_del{
+            margin-top: 34px;
+        }
+    }
+}
+
+@media only screen and (max-width:1365px){
+    .videos_section{
+        .custom_heading{
+            text-align: center;
+        }
+        p{
+            text-align: center;
+        }
+        .bor_del{
+            img{
+                margin-bottom: 15px;
+            }
+            flex-direction: column;
+            p{
+                padding-left: 0;
+            }
+        }
+        .doc_pro{
+            img{
+                margin-bottom: 15px;
+                margin-right: 0;
+            }
+            flex-direction: column;
+
+        }
+        .buttons_back {
+            justify-content: center;
+        }
+    }
+}
+
+@media only screen and (max-width:1023px){
+    .videos_section{
+        .video_gal_back{
+            margin-top: 30px;
+            &.inner{
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+    }
+}
+
+@media only screen and (max-width:500px){
+    .videos_section{
+        .video_gal_back{
+            
+            &.inner{
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    }
+}

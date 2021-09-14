@@ -1,0 +1,55 @@
+.client_back{
+    padding: 78px 0;
+    a{
+        margin-right: 142px;
+        &:last-child{
+            margin-right: 0;
+        }
+    }
+}
+
+@media only screen and (max-width:1600px){
+    .client_back{
+        a{
+            margin-right: 80px;
+        }
+    }
+}
+@media only screen and (max-width:1365px){
+    .client_back{
+        a{
+            margin-right: 40px;
+        }
+    }
+}
+
+@media only screen and (max-width:1023px){
+    .client_back{
+        text-align: center;
+        padding-bottom: 48px;
+       .container{
+            flex-wrap: wrap;
+            justify-content: center;
+       }
+        a{
+            margin-right: 0;
+            margin-bottom: 30px;
+            flex: 0 0 33.33333%;
+            display: inline-block;
+
+        }
+    }
+}
+
+@media only screen and (max-width:500px){
+    .client_back{
+        padding-top: 30px;
+        padding-bottom: 0;
+        a{
+            padding: 0 25px;
+            img{
+                width: 100%;
+            }
+        }
+    }
+}

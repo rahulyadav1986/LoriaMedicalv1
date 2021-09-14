@@ -1,0 +1,278 @@
+@import "./menu";
+
+header{
+    width: 100%;
+    
+    .container{
+        position: relative;
+    }
+    .top{
+        padding: 30px 0;
+    }
+    
+    .left{
+        flex-basis: 25%;
+        .social{
+            margin-bottom: 20px;
+            li{
+                margin-right: 26px;
+                &:last-child{
+                    margin-right: 0;
+                }
+                a{
+                    font-size: 17px;
+                }
+            }
+        }
+    }
+    .logo{
+        img{
+            height: 47px;
+        }
+    }
+    .right{
+        flex-basis: 25%;
+        p{
+            color: #2b3332;
+            font-size: 18px;
+            margin-bottom: 21px;
+        }
+        .custom_button{
+            &.icon{
+                a{
+                    padding-left: 85px;
+                    padding-right: 24px;
+                    span{
+                        background-color: var(--primary-color);
+                        width: 60px;
+                        height: 100%;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                    }
+                }
+            }
+        }
+    }
+    .info{
+        display: none;
+        cursor: pointer;
+        z-index: 99;
+    }
+
+    .navigation{
+        width: 100%;
+        background-color: var(--primary-color);
+        .main_nav{
+            li{
+                position: relative;
+                z-index: 9;
+                &:last-child{
+                    a{
+                        border-right: none;
+                    }
+                }
+                a{
+                    color: var(--white-color);
+                    font-size: 13px;
+                    font-weight: 600;
+                    text-transform: uppercase;
+                    padding: 27.5px 42px;
+                    display: block;
+                    border-right: #2162a7 1px solid;
+                    transition: all .5s ease-in-out;
+                    &:hover{
+                        background-color: #2162a7;
+                    }
+                }
+                ul{
+                    width: 300px;
+                    height: auto;
+                    position: absolute;
+                    top: calc(100% + 20px);
+                    left: 0;
+                    display: block !important;
+                    background-color: var(--primary-color);
+                    border-top: var(--white-color) 3px solid;
+                    opacity: 0;
+                    visibility: hidden;
+                    transition: all .5s ease-in-out;
+                    li{
+                        width: 100%;
+                        display: block;
+                        a{
+                            width: 100%;
+                            display: block;
+                            padding: 15px 0 15px 20px;
+                            border-bottom: rgba(255,255,255,.1) 1px solid;
+                        }
+                        &:last-child{
+                            a{
+                                border-bottom: none;
+                            }
+                        }
+                    }
+                }
+                &:hover{
+                    ul{
+                        opacity: 1;
+                        visibility: visible;
+                        top: 100%;
+                    }
+                }
+            }
+        }
+    }
+    
+}
+
+
+@media only screen and (max-width:1600px){
+    header{
+        .navigation {
+            .main_nav li{
+                a{
+                    padding: 27.5px 34px;
+                }
+            }
+        }
+    }
+}
+
+
+@media only screen and (max-width:1365px){
+    header{
+        .logo{
+            img{
+                height: 36px;
+            }
+        }
+        .right{
+            p{
+                font-size: 16px;
+            }
+        }
+        .navigation {
+            .main_nav li{
+                a{
+                    padding: 17.5px 17px;
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}
+@media only screen and (max-width:1023px){
+    header{
+        .container{
+            padding-right: 58px;
+        }
+        .left{
+            display: none !important;
+        }
+        .right{
+            display: none !important;
+        }
+        .info{
+            display: block;
+        }
+        .navigation {
+           display: none;
+           
+        }
+        .top{
+            .main_nav{
+                display: block !important;
+            }
+        }
+    }
+}
+
+
+@media only screen and (max-width:500px){
+    header{
+        .logo{
+            img{
+                height: 25px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width:400px){
+    header{
+        .logo{
+            img{
+                height: 20px;
+            }
+        }
+    }
+}
+
+.mobile_info{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    background-color: var(--white-color);
+    overflow-y: auto;
+    display: none !important;
+   
+    &.open{
+        display: flex !important;
+    }
+    #remove{
+        cursor: pointer;
+        position: absolute;
+        top: 20px;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+    .left{
+       margin-bottom: 30px;
+        .social{
+            margin-bottom: 20px;
+            li{
+                margin-right: 26px;
+                &:last-child{
+                    margin-right: 0;
+                }
+                a{
+                    font-size: 17px;
+                }
+            }
+        }
+    }
+    .right{
+        
+        p{
+            color: #2b3332;
+            font-size: 18px;
+            margin-bottom: 21px;
+        }
+        .custom_button{
+            &.icon{
+                a{
+                    padding-left: 85px;
+                    padding-right: 24px;
+                    span{
+                        background-color: var(--primary-color);
+                        width: 60px;
+                        height: 100%;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+

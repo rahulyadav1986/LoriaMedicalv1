@@ -1,0 +1,41 @@
+.gallery_section{
+    &.inner{
+        .common{
+            margin-bottom: 30px;
+        }
+    }
+    .row{
+        margin: 0 -15px;
+    }
+    p{
+        font-size: 16px;
+        margin-bottom: 50px;
+    }
+    .custom_button{
+        a{
+            padding: 0 67px;
+        }
+    }
+    .common{
+        padding: 0 15px;
+        img{
+
+            width: 100%;
+        }
+    }
+    
+}
+
+@media only screen and (max-width:1023px){
+    .gallery_section{
+        .common{
+            margin-bottom: 30px;
+        }
+    }
+}
+
+@media only screen and (max-width:500px){
+    .gallery_section{
+        text-align: center;
+    }
+}
